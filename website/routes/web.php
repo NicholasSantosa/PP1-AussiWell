@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::inertia('/', 'Home/Page');
+Route::inertia('/login', 'Auth/Login');
+Route::inertia('/sign-up', 'Auth/Signup');
