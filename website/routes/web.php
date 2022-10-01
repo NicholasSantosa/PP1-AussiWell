@@ -25,5 +25,10 @@ Route::inertia('/sign-up', 'Auth/Signup')->middleware('guest')->middleware('gues
 Route::inertia('/dashboard', 'Dashboard/Page')->middleware('auth');
 
 Route::get('/download-extension', function(){
-	return response()->download(public_path('downloads/Environmint-chrome-0.5.0.zip'));
+	return Storage::download(public_path('downloads/Environmint-chrome-0.5.0.zip'),
+							'Environmint-chrome-0.5.0.zip',
+							array(
+								'Content-Type: application/zip'
+							));
+	// return response()->download(public_path('downloads/Environmint-chrome-0.5.0.zip'));
 });

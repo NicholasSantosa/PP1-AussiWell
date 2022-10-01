@@ -14,7 +14,7 @@
 
 	<footer class="daisy-footer p-10 bg-neutral text-neutral-content">
 		<div>
-		<img :src="'/images/xxhdpi.png'" class="w-12 h-12" />
+		<img :src="'/images/xxhdpi.png/?v=gHAyT'" class="w-12 h-12" />
 		<p>Environmint Ltd.<br></p>
 		</div>
 		<div>

@@ -16,7 +16,7 @@
 	<link rel="canonical" href="">
 
 	<link rel="icon" href="/images/xxhdpi.png">
-	<link rel="apple-touch-icon" href="/images/xxhdpi.png">
+	<link rel="apple-touch-icon" href="/images/xxhdpi.png/?v=gHAyT">
 	{{-- <link rel="manifest" href="/my.webmanifest"> --}}
 	<meta name="theme-color" content="#424242">
 
