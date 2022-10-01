@@ -1,1 +1,0 @@
-import{h as o,o as s,c as a,a as e}from"./app.cf70955f.js";const t={class:"prose daisy-prose w-full max-w-xl m-auto"},n=e("h1",null,"Dashboard",-1),c=e("a",{href:"/logout",class:"daisy-btn"},"Logout",-1),l=[n,c],m={__name:"Page",setup(r){return o(()=>{chrome.runtime.sendMessage("cbobdkblikjleicamhminlmpjljajinn")}),(_,i)=>(s(),a("div",t,l))}};export{m as default};
