@@ -2,11 +2,11 @@
 	<div class="prose daisy-prose text-center m-auto">
 		<h1># Sign up</h1>
 		
-		<form action="/" @submit.prevent>
-			<input type="text" placeholder="Your name" class="daisy-input daisy-input-bordered w-full max-w-xs" />
-			<input type="email" placeholder="Email" class="daisy-input daisy-input-bordered w-full max-w-xs mt-2" />
-			<input type="password" placeholder="Password" class="daisy-input daisy-input-bordered w-full max-w-xs mt-2" />
-			<input type="password" placeholder="Confirm password" class="daisy-input daisy-input-bordered w-full max-w-xs mt-2" />
+		<form action="/sign-up" @submit.prevent="form.post('/sign-up')">
+			<input type="text" v-model="form.name" placeholder="Your name" class="daisy-input daisy-input-bordered w-full max-w-xs" required />
+			<input type="email" v-model="form.email" placeholder="Email" class="daisy-input daisy-input-bordered w-full max-w-xs mt-2" required />
+			<input type="password" v-model="form.password" placeholder="Password" class="daisy-input daisy-input-bordered w-full max-w-xs mt-2" required />
+			<input type="password" placeholder="Confirm password" class="daisy-input daisy-input-bordered w-full max-w-xs mt-2" required />
 			<br />
 			<br />
 			<button type="submit" class="daisy-btn block w-full max-w-xs m-auto">Create account</button>
@@ -17,3 +17,16 @@
 		</form>
 	</div>
 </template>
+
+<script setup>
+
+import { onMounted } from 'vue';
+import { useForm } from '@inertiajs/inertia-vue3'
+
+const form = useForm({
+	name: null,
+	email: null,
+	password: null,
+})
+
+</script>

@@ -5,7 +5,9 @@
 		<h1>Welcome to Envirommint!</h1>
 
 		<h2># Who are we?</h2>
-		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et hic consequuntur quia, quis quidem ratione dolorem magni voluptatibus fugit ipsum deserunt, laboriosam autem, praesentium nesciunt beatae sit eius nam eaque?</p>
+		<p>Environment assists you year-round in cutting your carbon emissions and reducing your carbon footprint on the planet. A simple chrome extension that provides you with real-time data on your online shopping behavior and alerts you on each product’s carbon emission allowing you to make smarter shopping choices.
+Score points while you save the world and receive exciting rewards.  Add Environment today to your chrome extension. 
+We work with COLES to provide you with a better shopping experience every day.</p>
 
 		<Link href="/login" class="daisy-btn">Get started</Link>
 	</div>

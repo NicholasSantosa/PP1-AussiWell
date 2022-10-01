@@ -2,9 +2,9 @@
 	<div class="prose daisy-prose text-center m-auto">
 		<h1># Login</h1>
 		
-		<form action="/" @submit.prevent>
-			<input type="email" placeholder="Email" class="daisy-input daisy-input-bordered w-full max-w-xs" />
-			<input type="password" placeholder="Password" class="daisy-input daisy-input-bordered w-full max-w-xs mt-2" />
+		<form action="/" @submit.prevent="form.post('/login')">
+			<input type="email" v-model="form.email" placeholder="Email" class="daisy-input daisy-input-bordered w-full max-w-xs" />
+			<input type="password" v-model="form.password" placeholder="Password" class="daisy-input daisy-input-bordered w-full max-w-xs mt-2" />
 			
 			<br />
 			<br />
@@ -16,3 +16,15 @@
 		</form>
 	</div>
 </template>
+
+<script setup>
+
+	import { onMounted } from 'vue';
+	import { useForm } from '@inertiajs/inertia-vue3'
+	
+	const form = useForm({
+		email: null,
+		password: null,
+	})
+	
+	</script>
