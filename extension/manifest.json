@@ -14,6 +14,10 @@
 						"*://shop.coles.com.au/*"]
 		}
 	],
+	"permissions": [
+		"tabs",
+		"storage"
+	],
 	"icons":{
 		"16": "logo.png",
     	"32": "logo.png",
