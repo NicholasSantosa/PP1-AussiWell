@@ -17,7 +17,22 @@
 	}
 
 	::selection{
-		@apply bg-primary text-white;
+		@apply bg-primary text-base-100;
+	}
+
+	*{
+		scrollbar-width: auto;
+		scrollbar-color: #52fa7c #272935;
+	}
+	*::-webkit-scrollbar {
+		width: 8px;
+	}
+	*::-webkit-scrollbar-track {
+		background: #272935;
+	}
+	*::-webkit-scrollbar-thumb {
+		background-color: #52fa7c;
+		border-radius: 10px;
 	}
 }
 

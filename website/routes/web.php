@@ -13,13 +13,17 @@ use App\Http\Controllers\AuthController;
 |
 */
 
-Route::inertia('/', 'Home/Page')->middleware('guest');
-Route::inertia('/login', 'Auth/Login')->middleware('guest')->name('login');
+Route::inertia('/', 'Home/Page');
+Route::inertia('/login', 'Auth/Login')->middleware('guest')->name('login')->middleware('guest');
 Route::post('/login', [AuthController::class, 'Login'])->middleware('guest');
 
 Route::get('/logout', [AuthController::class, 'Logout'])->middleware('auth');
 
 Route::post('/sign-up', [AuthController::class, 'SignUp'])->middleware('guest');
-Route::inertia('/sign-up', 'Auth/Signup')->middleware('guest');
+Route::inertia('/sign-up', 'Auth/Signup')->middleware('guest')->middleware('guest');
 
 Route::inertia('/dashboard', 'Dashboard/Page')->middleware('auth');
+
+Route::get('/download-extension', function(){
+	return response()->download(public_path('downloads/Environmint-chrome-0.5.0.zip'));
+});

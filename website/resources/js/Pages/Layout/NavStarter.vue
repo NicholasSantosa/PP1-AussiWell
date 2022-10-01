@@ -1,13 +1,43 @@
 <template>
 	<component :is="'style'">{{ tailwindCSS }}</component>
-	<Transition name="router-view" mode="out-in">
+	<navbar></navbar>
+	
+	<div class="min-h-[calc(100vh-64px)]">
+		<Transition name="router-view" mode="out-in">
+			<div v-if="contentTrigger">
+				<main class="p-6">
+					<slot />
+				</main>
+			</div>
+		</Transition>
+	</div>
+
+	<footer class="daisy-footer p-10 bg-neutral text-neutral-content">
 		<div>
-			<navbar></navbar>
-			<main v-if="contentTrigger" class="p-7">
-				<slot />
-			</main>
+		<img :src="'/images/xxhdpi.png'" class="w-12 h-12" />
+		<p>Environmint Ltd.<br></p>
 		</div>
-	</Transition>
+		<div>
+			<span class="daisy-footer-title">Services</span>
+			<a class="daisy-link daisy-link-hover">Branding</a>
+			<a class="daisy-link daisy-link-hover">Design</a>
+			<a class="daisy-link daisy-link-hover">Marketing</a>
+			<a class="daisy-link daisy-link-hover">Advertisement</a>
+		</div>
+		<div>
+			<span class="daisy-footer-title">Company</span>
+			<a class="daisy-link daisy-link-hover">About us</a>
+			<a class="daisy-link daisy-link-hover">Contact</a>
+			<a class="daisy-link daisy-link-hover">Jobs</a>
+			<a class="daisy-link daisy-link-hover">Press kit</a>
+		</div>
+		<div>
+			<span class="daisy-footer-title">Legal</span>
+			<a class="daisy-link daisy-link-hover">Terms of use</a>
+			<a class="daisy-link daisy-link-hover">Privacy policy</a>
+			<a class="daisy-link daisy-link-hover">Cookie policy</a>
+		</div>
+	</footer>
 </template>
 
 <script setup>

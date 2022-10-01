@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="cupcake">
+<html lang="en" data-theme="dracula">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,6 +19,8 @@
 	<link rel="apple-touch-icon" href="/images/xxhdpi.png">
 	{{-- <link rel="manifest" href="/my.webmanifest"> --}}
 	<meta name="theme-color" content="#424242">
+
+	<script src="https://kit.fontawesome.com/0db8c7f53e.js" crossorigin="anonymous"></script>
 
 	{{-- @routes --}}
 	@vite('resources/js/app.js')

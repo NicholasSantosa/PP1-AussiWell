@@ -1,21 +1,28 @@
 <template>
-	<component :is="'style'">{{ css }}</component>
-
 	<div class="prose daisy-prose w-full max-w-xl m-auto">
-		<h1>Welcome to Envirommint!</h1>
+		<h1>Welcome to <span class="text-primary">Envirommint</span></h1>
 
-		<h2># Who are we?</h2>
-		<p>Environment assists you year-round in cutting your carbon emissions and reducing your carbon footprint on the planet. A simple chrome extension that provides you with real-time data on your online shopping behavior and alerts you on each product’s carbon emission allowing you to make smarter shopping choices.
-Score points while you save the world and receive exciting rewards.  Add Environment today to your chrome extension. 
-We work with COLES to provide you with a better shopping experience every day.</p>
+		<p>Environment assists you year-round in cutting your carbon emissions and reducing your carbon footprint on the planet.</p>
+		<h2># How?</h2>
+		
+		<p>Using a chrome extension, we provide you with real-time data on your online shopping behavior and alerts you on each product's carbon emissions, allowing you to make smarter shopping choices.</p>
+		
+		<p>We've <span class="font-bold text-primary">gamified</span> the process, so you'll score points while helping the planet.</p>
 
-		<Link href="/login" class="daisy-btn">Get started</Link>
+		<h2># Get started</h2>
+		<p>Our extension currently supports <a class="daisy-link daisy-link-accent" target="_blank" href="https://shop.coles.com.au/a/national/home">Coles Online</a> as a proof of conept.</p>
+
+		<a href="/download-extension" class="daisy-btn gap-2">
+			<i class="fab fa-chrome"></i>
+			Get the extension
+		</a>
+		<h3>Already have the extension?</h3>
+		<Link href="/dashboard" class="daisy-btn daisy-btn-primary">Visit your dashboard</Link>
 	</div>
 </template>
 
 <script setup>
 
-import css from './app.scss?inline';
 // import { onMounted } from 'vue';
 
 </script>

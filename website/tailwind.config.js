@@ -15,8 +15,12 @@ module.exports = {
   
 	daisyui: {
 	  prefix: "daisy-",
-	  darkTheme: "dracula",
-	  themes: ["dracula", "cupcake", "cyberpunk", "coffee"]
+	  darkTheme: "forest",
+	  themes: ["cupcake",
+	  	{dracula: {
+				...require("daisyui/src/colors/themes")["[data-theme=dracula]"],
+				primary: "#52FA7C",
+		}}]
 	},
   }
   

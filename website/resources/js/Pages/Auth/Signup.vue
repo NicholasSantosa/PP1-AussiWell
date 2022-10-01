@@ -1,6 +1,7 @@
 <template>
 	<div class="prose daisy-prose text-center m-auto">
-		<h1># Sign up</h1>
+		<h1 class="text-primary"># Sign up</h1>
+		<p class="">Create an account to continue</p>
 		
 		<form action="/sign-up" @submit.prevent="form.post('/sign-up')">
 			<input type="text" v-model="form.name" placeholder="Your name" class="daisy-input daisy-input-bordered w-full max-w-xs" required />

@@ -1,0 +1,1 @@
+import{_ as s,o as e,c as t,a as o}from"./app.db33e260.js";const a={},c={class:"prose daisy-prose w-full max-w-xl m-auto"},_=o("h1",null,"Dashboard",-1),n=o("a",{href:"/logout",class:"daisy-btn"},"Logout",-1),r=[_,n];function d(l,i){return e(),t("div",c,r)}const h=s(a,[["render",d]]);export{h as default};

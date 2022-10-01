@@ -1,7 +1,7 @@
 <template>
 	<div class="prose daisy-prose text-center m-auto">
-		<h1># Login</h1>
-		
+		<h1 class="text-primary"># Login</h1>
+		<p>Login to continue</p>
 		<form action="/" @submit.prevent="form.post('/login')">
 			<input type="email" v-model="form.email" placeholder="Email" class="daisy-input daisy-input-bordered w-full max-w-xs" />
 			<input type="password" v-model="form.password" placeholder="Password" class="daisy-input daisy-input-bordered w-full max-w-xs mt-2" />
