@@ -5,7 +5,7 @@
 	<div class="min-h-[calc(100vh-64px)]">
 		<Transition name="router-view" mode="out-in">
 			<div v-if="contentTrigger">
-				<main class="p-6">
+				<main class="p-8 pb-20">
 					<slot />
 				</main>
 			</div>
