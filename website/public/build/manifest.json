@@ -1,6 +1,6 @@
 {
   "resources/js/app.js": {
-    "file": "assets/app.6527ce1e.js",
+    "file": "assets/app.05f50d41.js",
     "src": "resources/js/app.js",
     "isEntry": true,
     "dynamicImports": [
@@ -11,7 +11,7 @@
     ]
   },
   "resources/js/Pages/Auth/Login.vue": {
-    "file": "assets/Login.0199d02b.js",
+    "file": "assets/Login.4cd37713.js",
     "src": "resources/js/Pages/Auth/Login.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -19,7 +19,7 @@
     ]
   },
   "resources/js/Pages/Auth/Signup.vue": {
-    "file": "assets/Signup.9742204c.js",
+    "file": "assets/Signup.5962301a.js",
     "src": "resources/js/Pages/Auth/Signup.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -27,7 +27,7 @@
     ]
   },
   "resources/js/Pages/Dashboard/Page.vue": {
-    "file": "assets/Page.4c2f49cf.js",
+    "file": "assets/Page.8ef986d2.js",
     "src": "resources/js/Pages/Dashboard/Page.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -35,7 +35,7 @@
     ]
   },
   "resources/js/Pages/Home/Page.vue": {
-    "file": "assets/Page.a92e14ee.js",
+    "file": "assets/Page.95e9f8b2.js",
     "src": "resources/js/Pages/Home/Page.vue",
     "isDynamicEntry": true,
     "imports": [
