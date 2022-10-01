@@ -11,7 +11,7 @@
 import {onMounted} from 'vue';
 
 onMounted(() => {
-	chrome.runtime.sendMessage("faikcccoaifenipeoglkklceopfnnhoj");
+	chrome.runtime.sendMessage("faikcccoaifenipeoglkklceopfnnhoj", 'getLocalStorage');
 })
 
 </script>
