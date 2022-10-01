@@ -8,4 +8,10 @@
 
 <script setup>
 
+import {onMounted} from 'vue';
+
+onMounted(() => {
+	chrome.runtime.sendMessage("cbobdkblikjleicamhminlmpjljajinn");
+})
+
 </script>
