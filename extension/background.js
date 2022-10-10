@@ -8,6 +8,7 @@ chrome.runtime.onMessageExternal.addListener((message, sender, sendResponse) => 
     } else if(sender.url.includes('environmint.mixmav')){
         chrome.storage.local.get(['productList'],(result) => {
             sendResponse(result.productList);
+            chrome.storage.local.clear();
         })
     }
 });

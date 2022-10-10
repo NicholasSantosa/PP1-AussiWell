@@ -13,6 +13,7 @@
 	<meta property="og:type" content="website">
 	<meta name="twitter:card" content="summary_large_image">
 	<meta property="og:url" content="">
+	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<link rel="canonical" href="">
 
 	<link rel="icon" href="/images/xxhdpi.png">

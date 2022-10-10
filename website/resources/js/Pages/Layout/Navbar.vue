@@ -1,5 +1,5 @@
 <template>
-    <div class="daisy-navbar bg-base-100 sticky top-0 border-b-2 border-b-base-200 z-10">
+    <div class="daisy-navbar bg-base-100 sticky top-0 border-b-2 border-b-base-200 z-50">
         <div class="daisy-navbar-start">
             <div class="daisy-dropdown">
                 <label tabindex="0" class="daisy-btn daisy-btn-ghost daisy-btn-circle">

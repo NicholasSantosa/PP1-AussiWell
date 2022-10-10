@@ -1,22 +1,36 @@
 <template>
-	<div class="prose daisy-prose w-full max-w-xl m-auto">
+	<div class="w-full max-w-2xl m-auto">
 
-		<h1>Hi, {{ props.user.name }}</h1>
-		<img :src="'/images/hand-plant.svg'" class="w-full max-w-[100px]" alt="Hand plant">
-		<a href="/logout" class="daisy-btn">Logout</a>
-		<div class="relative mt-10">
+		<div class="prose daisy-prose text-center max-w-full">
+			<h1 class="!m-0">Hi, {{ props.user.name }}</h1>
+			<a href="/logout" class="daisy-link daisy-link-primary inline-block mt-5">Logout</a>
+		</div>
+
+
+		<add-new-record @refreshPastShoppingRecords="refreshRecords"></add-new-record>
+		
+		<div class="prose daisy-prose mt-14 text-center max-w-full">
+			<h2><i class="text-primary fa fa-clock-rotate-left"></i> Your Shopping history</h2>
+			<button class="daisy-btn daisy-btn-accent gap-2" @click="refreshRecords" :disabled="pastShoppingRecords == null">
+				<i class="fa fa-yin-yang" :class="{'fa-spin': pastShoppingRecords == null}"></i>
+				Refresh
+			</button>
+		</div>
+
+		<div class="mt-8 w-full">
+
 			<Transition name="router-view" mode="out-in">
-				<div v-if="productList == null">
-					<h4><i class="text-primary fa fa-cog fa-spin"></i>&nbsp;&nbsp;Loading your cart</h4>
+				<div v-if="pastShoppingRecords == null" class="text-center prose daisy-prose max-w-full">
+					<h1><i class="mt-8 text-accent fa fa-atom fa-spin"></i></h1>
 				</div>
-				<div v-else>
-					<h3>Products in your cart</h3>
-					<ul class="daisy-steps daisy-steps-vertical">
-						<li class="daisy-step daisy-step-secondary" v-for="product in productList">
-							{{ product }}
-						</li>
-					</ul>
-					<!-- <div class="w-full max-w-xs bg-secondary p-4 mt-5 rounded-lg" v-for="product in productList"><i class="fa fa-chess-bishop text-primary"></i>&nbsp;&nbsp;<span class="text-base-100 font-bold">{{ product }}</span></div> -->
+
+				<div v-else-if="pastShoppingRecords.length == 0" class="prose daisy-prose max-w-full">
+					<img :src="'/images/alien-taken.svg'" class="w-full max-w-[200px] block mx-auto" alt="Empty cart" />
+					<h4 class="text-center text-neutral mt-8">Looks empty in here</h4>
+				</div>
+
+				<div class="flex flex-wrap justify-center" v-else>
+					<past-record v-for="pastShoppingRecord in pastShoppingRecords" :record="pastShoppingRecord"></past-record>
 				</div>
 			</Transition>
 		</div>
@@ -25,25 +39,37 @@
 
 <script setup>
 
-import { ref, onMounted } from 'vue';
+import { onMounted, ref } from 'vue';
+import AddNewRecord from './AddNewRecord.vue';
+import PastRecord from './PastRecord.vue';
+import $ from 'jquery';
 
 const props = defineProps({
 	user: Object,
 })
 
-let productList = ref(null);
+let pastShoppingRecords = ref(null);
 
 onMounted(() => {
-	chrome.runtime.sendMessage("faikcccoaifenipeoglkklceopfnnhoj", 'getLocalStorage', (response) => {
-		setTimeout(() => {
-			productList.value = response;
-		}, 2500)
-	});
-
-	// setTimeout(() => {
-		// productList.value = ["Condoms", "Toothpaste", "Deodrant"]
-	// }, 500)
-
+	refreshRecords();
 })
+
+let refreshRecords = () => {
+	$.ajax({
+		url: '/api/get-all-shopping-records',
+		method: 'GET',
+		beforeSend: () => {
+			pastShoppingRecords.value = null;
+		},
+		success: (response) => {
+			setTimeout(() => {
+				pastShoppingRecords.value = response;
+			}, 1000)
+		},
+		error: () => {
+			alert('Something went wrong 🤐');
+		},
+	})
+}
 
 </script>

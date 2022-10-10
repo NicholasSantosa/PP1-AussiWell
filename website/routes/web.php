@@ -24,7 +24,14 @@ Route::get('/logout', [AuthController::class, 'Logout'])->middleware('auth');
 Route::post('/sign-up', [AuthController::class, 'SignUp'])->middleware('guest');
 Route::inertia('/sign-up', 'Auth/Signup')->middleware('guest')->middleware('guest');
 
+
+
 Route::get('/dashboard', [DashboardController::class, 'Index'])->middleware('auth');
+Route::get('/dashboard/shopping-record/{id}', [DashboardController::class, 'GetShoppingRecord'])->middleware('auth');
+
+Route::post('/api/add-shopping-record', [DashboardController::class, 'AddShoppingRecord'])->middleware('auth');
+Route::get('/api/get-all-shopping-records', [DashboardController::class, 'GetAllShoppingRecords'])->middleware('auth');
+
 
 Route::get('/download-extension', function(){
 	return response()->download(public_path('downloads/Environmint-chrome-0.5.0.zip'));
