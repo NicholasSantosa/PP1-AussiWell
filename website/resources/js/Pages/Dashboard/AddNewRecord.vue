@@ -52,10 +52,10 @@ onMounted(() => {
 
 
 		// Testing purposes
-		if((Math.random() * 11)%2==0){
+		if(Math.floor(Math.random() * 11) % 2 == 0){
 			modelOpen.value = true;
 			setTimeout(() => {
-				productList.value = ["Condoms", "Toothpaste", "Deodrant"]
+				productList.value = ["Toothpaste", "Deodrant", "Water"]
 			}, 2000)
 		}
 	// }
