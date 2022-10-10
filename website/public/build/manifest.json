@@ -1,6 +1,6 @@
 {
   "resources/js/app.js": {
-    "file": "assets/app.122dc92a.js",
+    "file": "assets/app.b67ec5fa.js",
     "src": "resources/js/app.js",
     "isEntry": true,
     "dynamicImports": [
@@ -14,7 +14,7 @@
     ]
   },
   "resources/js/Pages/Auth/Login.vue": {
-    "file": "assets/Login.888f72bb.js",
+    "file": "assets/Login.4a1ccf74.js",
     "src": "resources/js/Pages/Auth/Login.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -22,7 +22,7 @@
     ]
   },
   "resources/js/Pages/Auth/Signup.vue": {
-    "file": "assets/Signup.2903a796.js",
+    "file": "assets/Signup.f6415847.js",
     "src": "resources/js/Pages/Auth/Signup.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -30,7 +30,7 @@
     ]
   },
   "resources/js/Pages/Dashboard/AddNewRecord.vue": {
-    "file": "assets/AddNewRecord.8454fb27.js",
+    "file": "assets/AddNewRecord.f9cf6796.js",
     "src": "resources/js/Pages/Dashboard/AddNewRecord.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -38,7 +38,7 @@
     ]
   },
   "resources/js/Pages/Dashboard/Page.vue": {
-    "file": "assets/Page.e5a6679f.js",
+    "file": "assets/Page.fe41fb08.js",
     "src": "resources/js/Pages/Dashboard/Page.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -48,7 +48,7 @@
     ]
   },
   "resources/js/Pages/Dashboard/PastRecord.vue": {
-    "file": "assets/PastRecord.9c5911f7.js",
+    "file": "assets/PastRecord.c2c3eaf1.js",
     "src": "resources/js/Pages/Dashboard/PastRecord.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -56,7 +56,7 @@
     ]
   },
   "resources/js/Pages/Dashboard/ShoppingRecord/Page.vue": {
-    "file": "assets/Page.aed9b04b.js",
+    "file": "assets/Page.fe0894ea.js",
     "src": "resources/js/Pages/Dashboard/ShoppingRecord/Page.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -64,7 +64,7 @@
     ]
   },
   "resources/js/Pages/Home/Page.vue": {
-    "file": "assets/Page.00d154ed.js",
+    "file": "assets/Page.1a92021d.js",
     "src": "resources/js/Pages/Home/Page.vue",
     "isDynamicEntry": true,
     "imports": [

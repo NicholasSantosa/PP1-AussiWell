@@ -20,11 +20,11 @@
 		<div class="mt-8 w-full">
 
 			<Transition name="router-view" mode="out-in">
-				<div v-if="pastShoppingRecords == null" class="text-center prose daisy-prose max-w-full">
-					<h1><i class="mt-8 text-accent fa fa-atom fa-spin"></i></h1>
+				<div v-if="pastShoppingRecords == null" class="text-center prose daisy-prose max-w-full mt-8">
+					<h1><i class="text-accent fa fa-atom fa-spin"></i></h1>
 				</div>
 
-				<div v-else-if="pastShoppingRecords.length == 0" class="prose daisy-prose max-w-full">
+				<div v-else-if="pastShoppingRecords.length == 0" class="prose daisy-prose max-w-full mt-8">
 					<img :src="'/images/alien-taken.svg'" class="w-full max-w-[200px] block mx-auto" alt="Empty cart" />
 					<h4 class="text-center text-neutral mt-8">Looks empty in here</h4>
 				</div>
