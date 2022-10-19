@@ -4,5 +4,5 @@ let environmintInit = () => {
         productList.push(element.textContent);
     });
 
-    chrome.runtime.sendMessage("faikcccoaifenipeoglkklceopfnnhoj", productList);
+    chrome.runtime.sendMessage("lfgfbfbjbpjmbpkkfblelcnpljlocpgf", productList);
 }
