@@ -11,17 +11,18 @@
 		
 		<div class="prose daisy-prose mt-14 text-center max-w-full">
 			<h2><i class="text-primary fa fa-clock-rotate-left"></i> Your Shopping history</h2>
-			<button class="daisy-btn daisy-btn-accent gap-2" @click="refreshRecords" :disabled="pastShoppingRecords == null">
-				<i class="fa fa-yin-yang" :class="{'fa-spin': pastShoppingRecords == null}"></i>
+			<button class="daisy-btn daisy-btn-secondary gap-2" @click="refreshRecords" :disabled="pastShoppingRecords == null">
+				<i class="fa fa-yin-yang"></i>
 				Refresh
 			</button>
+			<p>{{ mainStore.extensionID }}</p>
 		</div>
 
 		<div class="mt-8 w-full">
 
 			<Transition name="router-view" mode="out-in">
 				<div v-if="pastShoppingRecords == null" class="text-center prose daisy-prose max-w-full mt-8">
-					<h1><i class="text-accent fa fa-atom fa-spin"></i></h1>
+					<h1><i class="text-secondary fa fa-yin-yang fa-spin"></i></h1>
 				</div>
 
 				<div v-else-if="pastShoppingRecords.length == 0" class="prose daisy-prose max-w-full mt-14">
@@ -43,6 +44,9 @@ import { onMounted, ref } from 'vue';
 import AddNewRecord from './AddNewRecord.vue';
 import PastRecord from './PastRecord.vue';
 import $ from 'jquery';
+import { useMainStore } from '@/store/MainStore';
+
+const mainStore = useMainStore();
 
 const props = defineProps({
 	user: Object,

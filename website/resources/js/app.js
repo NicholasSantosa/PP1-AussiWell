@@ -2,6 +2,7 @@ import './bootstrap';
 
 import { createApp, h } from 'vue';
 import { createPinia } from 'pinia'
+import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
 import { createInertiaApp } from '@inertiajs/inertia-vue3';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { InertiaProgress } from '@inertiajs/progress';
@@ -29,6 +30,7 @@ createInertiaApp({
 	},
 	setup({ el, App, props, plugin }) {
 		const pinia = createPinia()
+		pinia.use(piniaPluginPersistedstate)
 
 		const app = createApp({ render: () => h(App, props) })
 			.use(plugin)

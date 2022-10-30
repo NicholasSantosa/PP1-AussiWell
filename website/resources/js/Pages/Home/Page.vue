@@ -12,7 +12,7 @@
 		<h2># Get started</h2>
 		<p>Our extension currently supports <a class="daisy-link daisy-link-accent" target="_blank" href="https://shop.coles.com.au/a/national/home">Coles Online</a> as a proof of conept.</p>
 
-		<a href="/downloads/Environmint-chrome-0.5.0.zip" class="daisy-btn gap-2">
+		<a href="/downloads/Environmint-chrome.zip" class="daisy-btn gap-2">
 			<i class="fab fa-chrome"></i>
 			Get the extension
 		</a>
