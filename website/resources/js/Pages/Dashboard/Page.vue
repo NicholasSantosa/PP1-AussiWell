@@ -1,21 +1,20 @@
 <template>
-	<div class="w-full max-w-2xl m-auto">
+	<div class="w-full max-w-2xl m-auto text-center">
 
-		<div class="prose daisy-prose text-center max-w-full">
-			<h1 class="!m-0">Hi, {{ props.user.name }}</h1>
-			<a href="/logout" class="daisy-link daisy-link-primary inline-block mt-5">Logout</a>
+		<div class="prose daisy-prose max-w-full">
+			<h2 class="!m-0">Hi, {{ props.user.name }}</h2>
 		</div>
 
+		<edit-extension-id></edit-extension-id>
 
 		<add-new-record @refreshPastShoppingRecords="refreshRecords"></add-new-record>
 		
 		<div class="prose daisy-prose mt-14 text-center max-w-full">
-			<h2><i class="text-primary fa fa-clock-rotate-left"></i> Your Shopping history</h2>
+			<h1><i class="text-primary fa fa-clock-rotate-left"></i> Your Shopping history</h1>
 			<button class="daisy-btn daisy-btn-secondary gap-2" @click="refreshRecords" :disabled="pastShoppingRecords == null">
 				<i class="fa fa-yin-yang"></i>
 				Refresh
 			</button>
-			<!-- <p>{{ mainStore.extensionID }}</p> -->
 		</div>
 
 		<div class="mt-8 w-full">
@@ -41,15 +40,15 @@
 <script setup>
 
 import { onMounted, ref } from 'vue';
+import EditExtensionId from './EditExtensionId.vue';
 import AddNewRecord from './AddNewRecord.vue';
 import PastRecord from './PastRecord.vue';
-import $ from 'jquery';
-import { useMainStore } from '@/store/MainStore';
 
-const mainStore = useMainStore();
+import $ from 'jquery';
 
 const props = defineProps({
 	user: Object,
+	isAuthenticated: String,
 })
 
 let pastShoppingRecords = ref(null);

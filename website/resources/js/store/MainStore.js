@@ -4,7 +4,7 @@ export const useMainStore = defineStore("MainStore", {
 	state: () => {
 		return {
 			url: '/',
-			extensionID: 'hello',
+			extensionID: 'ppinjifijakogakgaofdjpccafcdhlkm',
 		}
 	},
 

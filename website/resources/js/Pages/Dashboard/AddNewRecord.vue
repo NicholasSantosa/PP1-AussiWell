@@ -38,6 +38,7 @@ import $ from 'jquery';
 let productList = ref(null);
 let modelOpen = ref(false);
 const emit = defineEmits(['refreshPastShoppingRecords'])
+
 onMounted(() => {
 	try {
 		chrome.runtime.sendMessage("lfgfbfbjbpjmbpkkfblelcnpljlocpgf", 'getLocalStorage', (response) => {
