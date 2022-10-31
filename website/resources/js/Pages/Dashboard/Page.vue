@@ -49,12 +49,11 @@ const props = defineProps({
 	isAuthenticated: String,
 })
 
-// let pastShoppingRecords = ref(null);
-let pastShoppingRecords = ref([{"id":6,"user_id":1,"product_list":"[\"Tempters Tuna in Olive Oil 95g\",\"Men Advanced Protection Sport Deodorant 220mL\",\"KitKat Packed With Milo Bar 45g\"]","created_at":"2 weeks ago","updated_at":"2022-10-11T09:08:41.000000Z"},{"id":5,"user_id":1,"product_list":"[\"Toothpaste\",\"Deodrant\",\"Water\"]","created_at":"3 weeks ago","updated_at":"2022-10-10T18:25:30.000000Z"},{"id":4,"user_id":1,"product_list":"[\"Toothpaste\",\"Deodrant\",\"Water\"]","created_at":"3 weeks ago","updated_at":"2022-10-10T18:25:29.000000Z"},{"id":3,"user_id":1,"product_list":"[\"Toothpaste\",\"Deodrant\",\"Water\"]","created_at":"3 weeks ago","updated_at":"2022-10-10T18:24:37.000000Z"},{"id":2,"user_id":1,"product_list":"[\"Toothpaste\",\"Deodrant\",\"Water\"]","created_at":"3 weeks ago","updated_at":"2022-10-10T18:21:05.000000Z"},{"id":1,"user_id":1,"product_list":"[\"Toothpaste\",\"Deodrant\",\"Water\"]","created_at":"3 weeks ago","updated_at":"2022-10-10T18:14:18.000000Z"}]);
+let pastShoppingRecords = ref(null);
 let addNewRecordComponent = ref(null);
 
 onMounted(() => {
-	// refreshRecords();
+	refreshRecords();
 })
 
 let checkForExtensionDataAgain = () => {
