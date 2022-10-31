@@ -45,6 +45,7 @@ onMounted(() => {
 	setTimeout(() => {
 		try {
 			chrome.runtime.sendMessage(mainStore.extensionID, 'getLocalStorage', (response) => {
+				console.log(response)
 				modelOpen.value = true;
 				
 				setTimeout(() => {
