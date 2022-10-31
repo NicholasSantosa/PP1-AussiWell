@@ -34,32 +34,36 @@
 
 import { ref, onMounted, defineEmits } from 'vue';
 import $ from 'jquery';
+import { useMainStore } from '@/store/MainStore';
 
+const mainStore = useMainStore();
 let productList = ref(null);
 let modelOpen = ref(false);
 const emit = defineEmits(['refreshPastShoppingRecords'])
 
 onMounted(() => {
-	try {
-		chrome.runtime.sendMessage("lfgfbfbjbpjmbpkkfblelcnpljlocpgf", 'getLocalStorage', (response) => {
-			modelOpen.value = true;
-			
-			setTimeout(() => {
-				productList.value = response;
-			}, 2000)
-		});
-	} catch {
-		// No products returned or extension unreachable
+	setTimeout(() => {
+		try {
+			chrome.runtime.sendMessage(mainStore.extensionID, 'getLocalStorage', (response) => {
+				modelOpen.value = true;
+				
+				setTimeout(() => {
+					productList.value = response;
+				}, 2000)
+			});
+		} catch {
+			// No products returned or extension unreachable
 
 
-		// Testing purposes
-		// if(Math.floor(Math.random() * 11) % 2 == 0){
-		// 	modelOpen.value = true;
-		// 	setTimeout(() => {
-		// 		productList.value = ["Toothpaste", "Deodrant", "Water"]
-		// 	}, 2000)
-		// }
-	}
+			// Testing purposes
+			// if(Math.floor(Math.random() * 11) % 2 == 0){
+			// 	modelOpen.value = true;
+			// 	setTimeout(() => {
+			// 		productList.value = ["Toothpaste", "Deodrant", "Water"]
+			// 	}, 2000)
+			// }
+		}
+	}, 1200);
 })
 
 let saveProducts = () => {
