@@ -15,7 +15,7 @@
 				<i class="fa fa-yin-yang"></i>
 				Refresh
 			</button>
-			<p>{{ mainStore.extensionID }}</p>
+			<!-- <p>{{ mainStore.extensionID }}</p> -->
 		</div>
 
 		<div class="mt-8 w-full">

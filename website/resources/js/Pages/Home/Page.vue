@@ -16,7 +16,7 @@
 			<i class="fab fa-chrome"></i>
 			Get the extension
 		</a>
-		<h3>Already have the extension?</h3>
+		<h3>Already got the extension?</h3>
 		<Link href="/dashboard" class="daisy-btn daisy-btn-primary">Visit your dashboard</Link>
 	</div>
 </template>
