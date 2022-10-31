@@ -19,9 +19,7 @@
 		</div>
 		<div>
 			<span class="daisy-footer-title">Services</span>
-			<a class="daisy-link daisy-link-hover">Branding</a>
 			<a class="daisy-link daisy-link-hover">Design</a>
-			<a class="daisy-link daisy-link-hover">Marketing</a>
 			<a class="daisy-link daisy-link-hover">Advertisement</a>
 		</div>
 		<div>

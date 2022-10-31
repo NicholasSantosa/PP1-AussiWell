@@ -1,18 +1,17 @@
 <template>
 	<div class="w-full max-w-2xl m-auto text-center">
-
-		<div class="prose daisy-prose max-w-full">
-			<h2 class="!m-0">Hi, {{ props.user.name }}</h2>
+		<edit-extension-id @checkForExtensionDataAgain="checkForExtensionDataAgain"></edit-extension-id>
+		<div class="prose daisy-prose max-w-full mt-16">
+			<h1 class="!m-0">Hi, {{ props.user.name }}</h1>
 		</div>
 
-		<edit-extension-id></edit-extension-id>
-
-		<add-new-record @refreshPastShoppingRecords="refreshRecords"></add-new-record>
+		<add-new-record @refreshPastShoppingRecords="refreshRecords" ref="addNewRecordComponent"></add-new-record>
 		
-		<div class="prose daisy-prose mt-14 text-center max-w-full">
-			<h1><i class="text-primary fa fa-clock-rotate-left"></i> Your Shopping history</h1>
-			<button class="daisy-btn daisy-btn-secondary gap-2" @click="refreshRecords" :disabled="pastShoppingRecords == null">
-				<i class="fa fa-yin-yang"></i>
+		<div class="prose daisy-prose mt-6 text-center max-w-full">
+			<h2><i class="fa fa-clock-rotate-left"></i> Your <span class="text-primary">Shopping history</span></h2>
+			<button class="daisy-btn daisy-btn-primary gap-2" @click="refreshRecords" :disabled="pastShoppingRecords == null">
+					<i class="fa fa-circle-notch fa-spin" v-show="pastShoppingRecords == null"></i>
+					<i class="fa fa-rotate" v-show="pastShoppingRecords != null"></i>
 				Refresh
 			</button>
 		</div>
@@ -20,8 +19,7 @@
 		<div class="mt-8 w-full">
 
 			<Transition name="router-view" mode="out-in">
-				<div v-if="pastShoppingRecords == null" class="text-center prose daisy-prose max-w-full mt-8">
-					<h1><i class="text-secondary fa fa-yin-yang fa-spin"></i></h1>
+				<div v-if="pastShoppingRecords == null" class="max-w-full mt-8">
 				</div>
 
 				<div v-else-if="pastShoppingRecords.length == 0" class="prose daisy-prose max-w-full mt-14">
@@ -51,11 +49,17 @@ const props = defineProps({
 	isAuthenticated: String,
 })
 
-let pastShoppingRecords = ref(null);
+// let pastShoppingRecords = ref(null);
+let pastShoppingRecords = ref([{"id":6,"user_id":1,"product_list":"[\"Tempters Tuna in Olive Oil 95g\",\"Men Advanced Protection Sport Deodorant 220mL\",\"KitKat Packed With Milo Bar 45g\"]","created_at":"2 weeks ago","updated_at":"2022-10-11T09:08:41.000000Z"},{"id":5,"user_id":1,"product_list":"[\"Toothpaste\",\"Deodrant\",\"Water\"]","created_at":"3 weeks ago","updated_at":"2022-10-10T18:25:30.000000Z"},{"id":4,"user_id":1,"product_list":"[\"Toothpaste\",\"Deodrant\",\"Water\"]","created_at":"3 weeks ago","updated_at":"2022-10-10T18:25:29.000000Z"},{"id":3,"user_id":1,"product_list":"[\"Toothpaste\",\"Deodrant\",\"Water\"]","created_at":"3 weeks ago","updated_at":"2022-10-10T18:24:37.000000Z"},{"id":2,"user_id":1,"product_list":"[\"Toothpaste\",\"Deodrant\",\"Water\"]","created_at":"3 weeks ago","updated_at":"2022-10-10T18:21:05.000000Z"},{"id":1,"user_id":1,"product_list":"[\"Toothpaste\",\"Deodrant\",\"Water\"]","created_at":"3 weeks ago","updated_at":"2022-10-10T18:14:18.000000Z"}]);
+let addNewRecordComponent = ref(null);
 
 onMounted(() => {
-	refreshRecords();
+	// refreshRecords();
 })
+
+let checkForExtensionDataAgain = () => {
+	addNewRecordComponent.value.checkForExtensionData();
+}
 
 let refreshRecords = () => {
 	$.ajax({

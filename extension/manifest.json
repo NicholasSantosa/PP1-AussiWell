@@ -1,17 +1,17 @@
 {
 	"name": "Environmint",
-	"version": "0.5.0",
+	"version": "1.0.0",
 	"manifest_version": 3,
 	"description": "Calculate your shopping cart's carbon footprint",
 	"externally_connectable": {
-		"matches": ["*://environmint.mixmav.me/*",
+		"matches": ["*://environmint.ap-southeast-2.elasticbeanstalk.com/*",
+					"*://environmint.mixmav.me/*",
 					"*://shop.coles.com.au/*"]
 	},
 	"web_accessible_resources": [
 		{
 			"resources": ["button.js"],
-			"matches": ["*://environmint.mixmav.me/*",
-						"*://shop.coles.com.au/*"]
+			"matches": ["*://shop.coles.com.au/*"]
 		}
 	],
 	"permissions": [
@@ -36,7 +36,8 @@
 	"content_scripts": [
 		{
 			"js": ["init.js"],
-			"matches": ["*://environmint.mixmav.me/*",
+			"matches": ["*://environmint.ap-southeast-2.elasticbeanstalk.com/*",
+						"*://environmint.mixmav.me/*",
 						"*://shop.coles.com.au/*"]
 		}
 	]

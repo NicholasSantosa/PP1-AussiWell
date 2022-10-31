@@ -42,6 +42,29 @@ let modelOpen = ref(false);
 const emit = defineEmits(['refreshPastShoppingRecords'])
 
 onMounted(() => {
+	checkForExtensionData();
+})
+
+let saveProducts = () => {
+	$.ajax({
+		url: '/api/add-shopping-record',
+		method: 'POST',
+		data: {
+			productList: productList.value
+		},
+		success: () => {
+			productList.value = null;
+			modelOpen.value = false;
+			emit('refreshPastShoppingRecords')
+		},
+
+		error: (response) => {
+			alert("Something went wrong 🤐");
+		}
+	});
+}
+
+let checkForExtensionData = () => {
 	setTimeout(() => {
 		try {
 			chrome.runtime.sendMessage(mainStore.extensionID, 'getLocalStorage', (response) => {
@@ -65,25 +88,8 @@ onMounted(() => {
 			// }
 		}
 	}, 1200);
-})
-
-let saveProducts = () => {
-	$.ajax({
-		url: '/api/add-shopping-record',
-		method: 'POST',
-		data: {
-			productList: productList.value
-		},
-		success: () => {
-			productList.value = null;
-			modelOpen.value = false;
-			emit('refreshPastShoppingRecords')
-		},
-
-		error: (response) => {
-			alert("Something went wrong 🤐");
-		}
-	});
 }
-
+defineExpose({
+	checkForExtensionData,
+})
 </script>
