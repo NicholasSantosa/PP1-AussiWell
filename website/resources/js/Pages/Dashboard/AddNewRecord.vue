@@ -67,7 +67,7 @@ let saveProducts = () => {
 let checkForExtensionData = () => {
 	setTimeout(() => {
 		chrome.runtime.sendMessage(mainStore.extensionID, 'getLocalStorage', (response) => {
-			if (typeof response != 'undefined') {
+			if (typeof response != 'undefined' && response.length > 0) {
 				modelOpen.value = true;
 				setTimeout(() => {
 					productList.value = response;
