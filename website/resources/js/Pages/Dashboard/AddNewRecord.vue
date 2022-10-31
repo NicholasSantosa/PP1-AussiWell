@@ -45,12 +45,12 @@ onMounted(() => {
 	setTimeout(() => {
 		try {
 			chrome.runtime.sendMessage(mainStore.extensionID, 'getLocalStorage', (response) => {
-				console.log(response)
-				modelOpen.value = true;
-				
-				setTimeout(() => {
-					productList.value = response;
-				}, 2000)
+				if (response !== null) {
+					modelOpen.value = true;
+					setTimeout(() => {
+						productList.value = response;
+					}, 2000)
+				}
 			});
 		} catch {
 			// No products returned or extension unreachable

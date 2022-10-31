@@ -1,6 +1,6 @@
 {
   "resources/js/app.js": {
-    "file": "assets/app.c2d59e3d.js",
+    "file": "assets/app.de0af895.js",
     "src": "resources/js/app.js",
     "isEntry": true,
     "dynamicImports": [
@@ -15,7 +15,7 @@
     ]
   },
   "resources/js/Pages/Auth/Login.vue": {
-    "file": "assets/Login.41356022.js",
+    "file": "assets/Login.bb38b0d9.js",
     "src": "resources/js/Pages/Auth/Login.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -23,7 +23,7 @@
     ]
   },
   "resources/js/Pages/Auth/Signup.vue": {
-    "file": "assets/Signup.6717476d.js",
+    "file": "assets/Signup.a667f8ad.js",
     "src": "resources/js/Pages/Auth/Signup.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -31,7 +31,7 @@
     ]
   },
   "resources/js/Pages/Dashboard/AddNewRecord.vue": {
-    "file": "assets/AddNewRecord.8e50f9b6.js",
+    "file": "assets/AddNewRecord.f906893c.js",
     "src": "resources/js/Pages/Dashboard/AddNewRecord.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -39,7 +39,7 @@
     ]
   },
   "resources/js/Pages/Dashboard/EditExtensionId.vue": {
-    "file": "assets/EditExtensionId.876af646.js",
+    "file": "assets/EditExtensionId.7a8ae1c8.js",
     "src": "resources/js/Pages/Dashboard/EditExtensionId.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -47,7 +47,7 @@
     ]
   },
   "resources/js/Pages/Dashboard/Page.vue": {
-    "file": "assets/Page.c7838b1b.js",
+    "file": "assets/Page.71b55c72.js",
     "src": "resources/js/Pages/Dashboard/Page.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -58,7 +58,7 @@
     ]
   },
   "resources/js/Pages/Dashboard/PastRecord.vue": {
-    "file": "assets/PastRecord.f7574052.js",
+    "file": "assets/PastRecord.62bda013.js",
     "src": "resources/js/Pages/Dashboard/PastRecord.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -66,7 +66,7 @@
     ]
   },
   "resources/js/Pages/Dashboard/ShoppingRecord/Page.vue": {
-    "file": "assets/Page.79658914.js",
+    "file": "assets/Page.c32a496b.js",
     "src": "resources/js/Pages/Dashboard/ShoppingRecord/Page.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -74,7 +74,7 @@
     ]
   },
   "resources/js/Pages/Home/Page.vue": {
-    "file": "assets/Page.aaf385e3.js",
+    "file": "assets/Page.45749358.js",
     "src": "resources/js/Pages/Home/Page.vue",
     "isDynamicEntry": true,
     "imports": [
