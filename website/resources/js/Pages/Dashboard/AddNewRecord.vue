@@ -32,7 +32,7 @@
 
 <script setup>
 
-import { ref, onMounted, defineEmits } from 'vue';
+import { ref, onMounted } from 'vue';
 import $ from 'jquery';
 import { useMainStore } from '@/store/MainStore';
 
@@ -66,27 +66,25 @@ let saveProducts = () => {
 
 let checkForExtensionData = () => {
 	setTimeout(() => {
-		try {
-			chrome.runtime.sendMessage(mainStore.extensionID, 'getLocalStorage', (response) => {
-				if (response !== null) {
-					modelOpen.value = true;
-					setTimeout(() => {
-						productList.value = response;
-					}, 2000)
-				}
-			});
-		} catch {
-			// No products returned or extension unreachable
+		chrome.runtime.sendMessage(mainStore.extensionID, 'getLocalStorage', (response) => {
+			if (typeof response != 'undefined') {
+				modelOpen.value = true;
+				setTimeout(() => {
+					productList.value = response;
+				}, 2000)
+			}
+			if(chrome.runtime.lastError) {	// No products returned or extension unreachable
+				console.log("No products found in extension DB");
+			}
+		});
 
-
-			// Testing purposes
-			// if(Math.floor(Math.random() * 11) % 2 == 0){
-			// 	modelOpen.value = true;
-			// 	setTimeout(() => {
-			// 		productList.value = ["Toothpaste", "Deodrant", "Water"]
-			// 	}, 2000)
-			// }
-		}
+		// Testing purposes
+		// if(Math.floor(Math.random() * 11) % 2 == 0){
+		// 	modelOpen.value = true;
+		// 	setTimeout(() => {
+		// 		productList.value = ["Toothpaste", "Deodrant", "Water"]
+		// 	}, 2000)
+		// }
 	}, 1200);
 }
 defineExpose({

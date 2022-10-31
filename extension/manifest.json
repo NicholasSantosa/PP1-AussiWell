@@ -6,6 +6,7 @@
 	"externally_connectable": {
 		"matches": ["*://environmint.ap-southeast-2.elasticbeanstalk.com/*",
 					"*://environmint.mixmav.me/*",
+					"http://localhost/*",
 					"*://shop.coles.com.au/*"]
 	},
 	"web_accessible_resources": [
@@ -38,6 +39,7 @@
 			"js": ["init.js"],
 			"matches": ["*://environmint.ap-southeast-2.elasticbeanstalk.com/*",
 						"*://environmint.mixmav.me/*",
+						"http://localhost/*",
 						"*://shop.coles.com.au/*"]
 		}
 	]

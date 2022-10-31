@@ -27,7 +27,7 @@
 </template>
 
 <script setup>
-import { ref, defineEmits } from 'vue';
+import { ref } from 'vue';
 import { useMainStore } from '@/store/MainStore';
 import $ from 'jquery';
 const emit = defineEmits(['checkForExtensionDataAgain'])
