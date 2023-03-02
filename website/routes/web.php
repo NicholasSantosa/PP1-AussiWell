@@ -31,8 +31,3 @@ Route::get('/dashboard/shopping-record/{id}', [DashboardController::class, 'GetS
 
 Route::post('/api/add-shopping-record', [DashboardController::class, 'AddShoppingRecord'])->middleware('auth');
 Route::get('/api/get-all-shopping-records', [DashboardController::class, 'GetAllShoppingRecords'])->middleware('auth');
-
-
-Route::get('/download-extension', function(){
-	return response()->download(public_path('downloads/Environmint-chrome-0.5.0.zip'));
-});
