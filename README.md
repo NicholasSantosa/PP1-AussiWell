@@ -1,7 +1,7 @@
 # Welcome
 This repository contains folders for an extension and the website.
 Github: https://github.com/NicholasSantosa/PP1-AussiWell
-Website: http://environmint.ap-southeast-2.elasticbeanstalk.com/
+Website: https://environmint.mixmav.me
 
 
 ## Installation instructions
